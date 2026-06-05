@@ -1,0 +1,20 @@
+// Prisma 7 schema — Neon (PostgreSQL) via the serverless driver adapter.
+//
+// ⚠️ STUB ONLY (Phase 1). This is a placeholder so the project compiles.
+// The real multi-role data model (User, Course, Material, Enrollment,
+// Progress, WritingSubmission, ...) is designed in Phase 2.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/db/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// Placeholder model. Remove once the real schema lands in Phase 2.
+model HealthCheck {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+}
